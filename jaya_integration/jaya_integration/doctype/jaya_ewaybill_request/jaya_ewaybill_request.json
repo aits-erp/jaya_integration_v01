@@ -1,0 +1,273 @@
+{
+  "doctype": "DocType",
+  "name": "Jaya Ewaybill Request",
+  "module": "Jaya Integration",
+  "custom": 0,
+  "istable": 0,
+  "is_submittable": 0,
+  "track_changes": 1,
+  "engine": "InnoDB",
+  "field_order": [
+    "request_key",
+    "external_id",
+    "lr_no",
+    "source_company_id",
+    "source_company_code",
+    "company",
+    "gstin",
+    "state",
+    "processing_started_at",
+    "invoice_number",
+    "invoice_date",
+    "invoice_value",
+    "consignor",
+    "consignor_gstin",
+    "consignee",
+    "consignee_gstin",
+    "dispatch_address",
+    "shipping_address",
+    "vehicle_number",
+    "distance",
+    "items",
+    "source_json",
+    "payload_json",
+    "payload_hash",
+    "validation_json",
+    "result_json",
+    "provider_data_json",
+    "ewaybill_number",
+    "generated_at",
+    "valid_until",
+    "pdf_file",
+    "last_error"
+  ],
+  "fields": [
+    {
+      "fieldname": "request_key",
+      "label": "Request Key",
+      "fieldtype": "Data",
+      "reqd": 1,
+      "unique": 1,
+      "read_only": 1
+    },
+    {
+      "fieldname": "external_id",
+      "label": "Source LR ID",
+      "fieldtype": "Data",
+      "reqd": 1,
+      "unique": 1,
+      "read_only": 1
+    },
+    {
+      "fieldname": "lr_no",
+      "label": "LR Number",
+      "fieldtype": "Data",
+      "read_only": 1
+    },
+    {
+      "fieldname": "source_company_id",
+      "label": "Next.js Operating Company ID",
+      "fieldtype": "Data",
+      "read_only": 1
+    },
+    {
+      "fieldname": "source_company_code",
+      "label": "Next.js Company Code",
+      "fieldtype": "Data",
+      "read_only": 1
+    },
+    {
+      "fieldname": "company",
+      "label": "ERPNext Company",
+      "fieldtype": "Link",
+      "options": "Company",
+      "reqd": 1,
+      "read_only": 1
+    },
+    {
+      "fieldname": "gstin",
+      "label": "Generating GSTIN",
+      "fieldtype": "Data",
+      "reqd": 1,
+      "read_only": 1
+    },
+    {
+      "fieldname": "state",
+      "label": "State",
+      "fieldtype": "Select",
+      "options": "Draft\nReady\nProcessing\nGenerated\nUncertain",
+      "default": "Draft",
+      "read_only": 1
+    },
+    {
+      "fieldname": "processing_started_at",
+      "label": "Processing Started At",
+      "fieldtype": "Datetime",
+      "read_only": 1
+    },
+    {
+      "fieldname": "invoice_number",
+      "label": "Invoice Number",
+      "fieldtype": "Data",
+      "read_only": 1
+    },
+    {
+      "fieldname": "invoice_date",
+      "label": "Invoice Date",
+      "fieldtype": "Date",
+      "read_only": 1
+    },
+    {
+      "fieldname": "invoice_value",
+      "label": "Invoice Value",
+      "fieldtype": "Currency",
+      "read_only": 1
+    },
+    {
+      "fieldname": "consignor",
+      "label": "Consignor",
+      "fieldtype": "Data",
+      "read_only": 1
+    },
+    {
+      "fieldname": "consignor_gstin",
+      "label": "Consignor GSTIN",
+      "fieldtype": "Data",
+      "read_only": 1
+    },
+    {
+      "fieldname": "consignee",
+      "label": "Consignee",
+      "fieldtype": "Data",
+      "read_only": 1
+    },
+    {
+      "fieldname": "consignee_gstin",
+      "label": "Consignee GSTIN",
+      "fieldtype": "Data",
+      "read_only": 1
+    },
+    {
+      "fieldname": "dispatch_address",
+      "label": "Dispatch Address",
+      "fieldtype": "Small Text",
+      "read_only": 1
+    },
+    {
+      "fieldname": "shipping_address",
+      "label": "Shipping Address",
+      "fieldtype": "Small Text",
+      "read_only": 1
+    },
+    {
+      "fieldname": "vehicle_number",
+      "label": "Vehicle Number",
+      "fieldtype": "Data",
+      "read_only": 1
+    },
+    {
+      "fieldname": "distance",
+      "label": "Distance (km)",
+      "fieldtype": "Float",
+      "read_only": 1
+    },
+    {
+      "fieldname": "items",
+      "label": "Goods",
+      "fieldtype": "Table",
+      "options": "Jaya Ewaybill Item",
+      "read_only": 1
+    },
+    {
+      "fieldname": "source_json",
+      "label": "Reviewed LR Snapshot",
+      "fieldtype": "Code",
+      "options": "JSON",
+      "read_only": 1
+    },
+    {
+      "fieldname": "payload_json",
+      "label": "Provider Payload",
+      "fieldtype": "Code",
+      "options": "JSON",
+      "read_only": 1
+    },
+    {
+      "fieldname": "payload_hash",
+      "label": "Prepared Version",
+      "fieldtype": "Data",
+      "read_only": 1
+    },
+    {
+      "fieldname": "validation_json",
+      "label": "Missing or Invalid Fields",
+      "fieldtype": "Code",
+      "options": "JSON",
+      "read_only": 1
+    },
+    {
+      "fieldname": "result_json",
+      "label": "Provider Result",
+      "fieldtype": "Code",
+      "options": "JSON",
+      "read_only": 1
+    },
+    {
+      "fieldname": "provider_data_json",
+      "label": "Fetched Provider Data",
+      "fieldtype": "Code",
+      "options": "JSON",
+      "read_only": 1
+    },
+    {
+      "fieldname": "ewaybill_number",
+      "label": "E-way Bill Number",
+      "fieldtype": "Data",
+      "read_only": 1
+    },
+    {
+      "fieldname": "generated_at",
+      "label": "Generation Time",
+      "fieldtype": "Datetime",
+      "read_only": 1
+    },
+    {
+      "fieldname": "valid_until",
+      "label": "Valid Until",
+      "fieldtype": "Datetime",
+      "read_only": 1
+    },
+    {
+      "fieldname": "pdf_file",
+      "label": "E-way Bill PDF",
+      "fieldtype": "Attach",
+      "read_only": 1
+    },
+    {
+      "fieldname": "last_error",
+      "label": "Last Operation Error",
+      "fieldtype": "Small Text",
+      "read_only": 1
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "print": 1,
+      "report": 1
+    },
+    {
+      "role": "Jaya Ewaybill Integration",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "print": 1,
+      "report": 1
+    }
+  ],
+  "autoname": "field:request_key",
+  "title_field": "lr_no"
+}

@@ -1,0 +1,75 @@
+{
+  "doctype": "DocType",
+  "name": "Jaya Ewaybill Item",
+  "module": "Jaya Integration",
+  "custom": 0,
+  "istable": 1,
+  "is_submittable": 0,
+  "track_changes": 0,
+  "engine": "InnoDB",
+  "field_order": [
+    "description",
+    "hsn",
+    "quantity",
+    "unit",
+    "taxable_value",
+    "cgst_rate",
+    "sgst_rate",
+    "igst_rate",
+    "cess_rate",
+    "cess_non_advol"
+  ],
+  "fields": [
+    {
+      "fieldname": "description",
+      "label": "Description",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "hsn",
+      "label": "HSN",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "quantity",
+      "label": "Quantity",
+      "fieldtype": "Float"
+    },
+    {
+      "fieldname": "unit",
+      "label": "NIC Unit Code",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "taxable_value",
+      "label": "Taxable Value",
+      "fieldtype": "Currency"
+    },
+    {
+      "fieldname": "cgst_rate",
+      "label": "CGST Rate",
+      "fieldtype": "Float"
+    },
+    {
+      "fieldname": "sgst_rate",
+      "label": "SGST Rate",
+      "fieldtype": "Float"
+    },
+    {
+      "fieldname": "igst_rate",
+      "label": "IGST Rate",
+      "fieldtype": "Float"
+    },
+    {
+      "fieldname": "cess_rate",
+      "label": "Cess Rate",
+      "fieldtype": "Float"
+    },
+    {
+      "fieldname": "cess_non_advol",
+      "label": "Non-ad valorem Cess Rate",
+      "fieldtype": "Float"
+    }
+  ],
+  "permissions": []
+}

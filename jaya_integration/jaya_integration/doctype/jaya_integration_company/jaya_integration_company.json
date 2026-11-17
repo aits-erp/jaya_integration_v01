@@ -1,0 +1,62 @@
+{
+  "doctype": "DocType",
+  "name": "Jaya Integration Company",
+  "module": "Jaya Integration",
+  "custom": 0,
+  "istable": 0,
+  "is_submittable": 0,
+  "track_changes": 1,
+  "engine": "InnoDB",
+  "field_order": [
+    "source_company_id",
+    "source_company_code",
+    "company",
+    "gstin",
+    "enabled"
+  ],
+  "fields": [
+    {
+      "fieldname": "source_company_id",
+      "label": "Next.js Operating Company ID",
+      "fieldtype": "Data",
+      "reqd": 1,
+      "unique": 1
+    },
+    {
+      "fieldname": "source_company_code",
+      "label": "Next.js Company Code",
+      "fieldtype": "Data",
+      "reqd": 1
+    },
+    {
+      "fieldname": "company",
+      "label": "ERPNext Company",
+      "fieldtype": "Link",
+      "options": "Company",
+      "reqd": 1
+    },
+    {
+      "fieldname": "gstin",
+      "label": "Generating GSTIN",
+      "fieldtype": "Data",
+      "reqd": 1
+    },
+    {
+      "fieldname": "enabled",
+      "label": "Allow Generation",
+      "fieldtype": "Check",
+      "default": "0"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "print": 1,
+      "report": 1
+    }
+  ],
+  "autoname": "field:source_company_id"
+}
